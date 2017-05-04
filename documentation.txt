@@ -1,0 +1,4 @@
+Hello! 
+
+This is a library written in c++ with a command line interface to help you solve basic physics creations. 
+Everything in here is created by me. Except for the physics part. I don't hate myself that much. 
