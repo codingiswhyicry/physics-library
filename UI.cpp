@@ -122,15 +122,37 @@
                  cout << joules << " / " << coloumbs << " = " << jvc_volts(joules, coulombs) << " volts "<< endl; 
                  
              
-             default: 
+             default:
+             
+             cout << "something happened. it mine have been your fault. it might have been mine. but you're gonna suffer and start at the beginning."
+             
+             start()
          }
          
          case 2: 
          //resistance
+             int volts; 
+             int current; 
+             
+             cout << "input your volts:" << endl; 
+             cin >> volts; 
+             cout << "input your current" << endl; 
+             cin >> current; 
+             
+             cout << volts << " / " << current << " = " << ohms_resistance(volts, current) << endl; 
          
          case 3: 
          //current
-         
+             int resistance; 
+             int volts; 
+             
+             cout << "input your resistance:" << endl; 
+             cin >> resistance; 
+             cout << "input your volts:" << endl; 
+             cin >> volts; 
+             
+             cout << volts << " / " << resistance << " = " << ohms_current(resistance, volts) << endl; 
+            
          case 4: 
          //watts
          
@@ -146,6 +168,7 @@
          default: 
          cout << "the number you typed wasn't found. you'll be taken back to the start so you can learn from your mistakes and pay for your sins."
          
+         start()
      }
  }
  
