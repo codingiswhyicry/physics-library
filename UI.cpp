@@ -20,6 +20,8 @@
      
     cout << "Hello, this is the command line interface for a physics calculator." << endl; 
     
+    start(); 
+    
     while (1 == 1) {
         
         //check to see if user wrote help 
@@ -155,15 +157,50 @@
             
          case 4: 
          //watts
+            int amps; 
+            int volts; 
+         
+            cout << "input your amps: " << endl;
+            cin >> amps; 
+            cout << "input your volts: " << endl; 
+            cin >> volts; 
+            
+            cout << amps << " * " << volts << " = " << wav_watts(amps, volts) << endl; 
          
          case 5:
          //amps
+         int watts; 
+         int volts; 
+         
+         cout << "input your watts: " << endl; 
+         cin >> watts; 
+         cout << "input your volts: " << endl; 
+         
+         cout << watts << " / " << volts << " = " << wav_amps(watts, volts) << endl; 
          
          case 6: 
          //joules
          
+         int coloumbs; 
+         int volts; 
+         
+         cout << "input your coloums" << endl; 
+         cin >> coloumbs; 
+         cout << "input your volts"
+         
+         cout << volts << " x " << coloumbs << " = " << jvc_joules(volts, coloumbs) << endl; 
+         
          case 7: 
          //coloumbs
+         int joules; 
+         int volts; 
+         
+         cout << "input your joules: " << endl; 
+         cin >> joules; 
+         cout << "input your volts: " << endl; 
+         cin >> volts; 
+         
+         cout << joules << " / " << volts << " = " << jvc_coulombs(volts, coloumbs) << endl; 
          
          default: 
          cout << "the number you typed wasn't found. you'll be taken back to the start so you can learn from your mistakes and pay for your sins."
