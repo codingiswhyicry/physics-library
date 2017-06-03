@@ -89,8 +89,8 @@
              
              case 1:
              
-                 int resistance;
-                 int current;
+                 double resistance;
+                 double current;
                  
                  cout << "input your resistance:" << endl; 
                  cin >> resistance; 
@@ -101,8 +101,8 @@
              
              case 2: 
              
-                 int watts;
-                 int amps;
+                 double watts;
+                 double amps;
                  
                  cout << "input your watts:" << endl; 
                  cin >> watts; 
@@ -113,8 +113,8 @@
                  
              case 3: 
              
-                 int joules;
-                 int coloumbs;
+                 double joules;
+                 double coloumbs;
                  
                  cout << "input your joules:" << endl; 
                  cin >> joules; 
@@ -133,8 +133,8 @@
          
          case 2: 
          //resistance
-             int volts; 
-             int current; 
+             double volts; 
+             double current; 
              
              cout << "input your volts:" << endl; 
              cin >> volts; 
@@ -145,8 +145,8 @@
          
          case 3: 
          //current
-             int resistance; 
-             int volts; 
+             double resistance; 
+             double volts; 
              
              cout << "input your resistance:" << endl; 
              cin >> resistance; 
@@ -157,8 +157,8 @@
             
          case 4: 
          //watts
-            int amps; 
-            int volts; 
+            double amps; 
+            double volts; 
          
             cout << "input your amps: " << endl;
             cin >> amps; 
@@ -168,23 +168,23 @@
             cout << amps << " * " << volts << " = " << wav_watts(amps, volts) << endl; 
          
          case 5:
-         //amps
-         int watts; 
-         int volts; 
-         
-         cout << "input your watts: " << endl; 
-         cin >> watts; 
-         cout << "input your volts: " << endl; 
-         
-         cout << watts << " / " << volts << " = " << wav_amps(watts, volts) << endl; 
-         
+             //amps
+             double watts; 
+             double volts; 
+             
+             cout << "input your watts: " << endl; 
+             cin >> watts; 
+             cout << "input your volts: " << endl; 
+             
+             cout << watts << " / " << volts << " = " << wav_amps(watts, volts) << endl; 
+             
          case 6: 
          //joules
          
-         int coloumbs; 
-         int volts; 
+         double coloumbs; 
+         double volts; 
          
-         cout << "input your coloums" << endl; 
+         cout << "input your coloumbs" << endl; 
          cin >> coloumbs; 
          cout << "input your volts"
          
@@ -192,8 +192,8 @@
          
          case 7: 
          //coloumbs
-         int joules; 
-         int volts; 
+         double joules; 
+         double volts; 
          
          cout << "input your joules: " << endl; 
          cin >> joules; 
@@ -211,12 +211,60 @@
  
  void mod_ener() {
      
-     cout << "Type the number of the equation you're looking for:" << endl << "" << endl << "" << endl;
+      cout << "Type the number of the equation you're looking for:" << endl << "1) efficency" << endl << "2) potential energy" << endl << "3) kinetic energy" << endl  << "4) work done" << endl  << "5) power" << endl  << "6) energy" << endl;
+     
+     int equation; 
+     
+     cin >> equation;
+     
+     switch(equation) {
+         case 1: //efficency
+            double e_out; 
+            double e_in; 
+            
+            cout << "input the amount of work input: "
+            cin >> e_in; 
+            
+            cout << "input the amount of work output: "
+            cin >> e_out; 
+            
+            cout << e_out << " / " << e_in << " = " << efficency(e_out, e_in) << endl; 
+            
+         case 2: //potential energy
+            double mass; 
+            double gravity; 
+            double height; 
+            
+            cout << "input the amount of mass: "
+            cin >> mass; 
+            
+            cout << "input the amount of gravity: "
+            cin >> gravity; 
+            
+            cout << "input the amount of height: "
+            cin >> height; 
+            
+            cout << 
+         
+         case 3: //kinetic energy
+         case 4: //work 
+         case 5: //power
+         case 6: //energy
+         default: 
+         
+         cout << "the number you typed wasn't found. you'll be taken back to the start so you can learn from your mistakes and pay for your sins."
+         
+         start()
+     }
+     
+    
  } 
  
  void mod_force() {
      
-     cout << "Type the number of the equation you're looking for:" << endl << "" << endl << "" << endl;
+     cout << "Type the number of the equation you're looking for:" << endl;
+     
+     
  }
  
  void mod_light() {
