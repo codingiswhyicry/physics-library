@@ -222,10 +222,10 @@
             double e_out; 
             double e_in; 
             
-            cout << "input the amount of work input: "
+            cout << "input the amount of work input: " << endl; 
             cin >> e_in; 
             
-            cout << "input the amount of work output: "
+            cout << "input the amount of work output: " << endl; 
             cin >> e_out; 
             
             cout << e_out << " / " << e_in << " = " << efficency(e_out, e_in) << endl; 
@@ -235,18 +235,19 @@
             double gravity; 
             double height; 
             
-            cout << "input the amount of mass: "
+            cout << "input the amount of mass:" << endl; 
             cin >> mass; 
             
-            cout << "input the amount of gravity: "
+            cout << "input the amount of gravity:" << endl; 
             cin >> gravity; 
             
-            cout << "input the amount of height: "
+            cout << "input the amount of height:" << endl; 
             cin >> height; 
             
-            cout << 
+            cout << mass << " * " << gravity <<  " * " << height << " = " << GPE(mass, gravity, height) << endl; 
          
          case 3: //kinetic energy
+            double mass, double velocity; 
          case 4: //work 
          case 5: //power
          case 6: //energy
