@@ -5,7 +5,7 @@ double speed(double distance, double time) {
 
 double acceleration(double f_velo, double s_velo, double time) {
     
-    int change = s_velo - f_velo; 
+    int change = f_velo - s_velo;
     
     return change / time; 
 }

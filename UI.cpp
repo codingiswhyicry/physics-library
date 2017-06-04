@@ -1,9 +1,6 @@
  //include libraries up here 
  #include <iostream>
- #include "electricity.h"
- #include "energy.h"
- #include "forces.h"
- #include "light.h"
+ #include "physics.h" 
  
  using namespace std; 
  
@@ -66,6 +63,9 @@
  void help() {
      
      cout << "welcome to the physics calculator!" << endl;
+     
+     //write help stuff here
+     
  }
  
  void mod_elec() {
@@ -74,6 +74,8 @@
      
      int in_num; 
      cin >> in_num; 
+     
+     cout << endl; 
      
      switch (in_num) {
          
@@ -84,13 +86,13 @@
          int user_in; 
          
          cin >> user_in; 
+         cout << endl; 
          
          switch(user_in) {
              
              case 1:
              
-                 double resistance;
-                 double current;
+                 double resistance, current;
                  
                  cout << "input your resistance:" << endl; 
                  cin >> resistance; 
@@ -101,8 +103,7 @@
              
              case 2: 
              
-                 double watts;
-                 double amps;
+                 double watts, amps;
                  
                  cout << "input your watts:" << endl; 
                  cin >> watts; 
@@ -113,13 +114,15 @@
                  
              case 3: 
              
-                 double joules;
-                 double coloumbs;
+                 double joules, coloumbs;
                  
-                 cout << "input your joules:" << endl; 
+                 cout << "input your joules: "; 
                  cin >> joules; 
-                 cout << "input your coloumbs:" << endl; 
+                 cout << endl; 
+                 
+                 cout << "input your coloumbs: "; 
                  cin >> coloumbs; 
+                 cout << endl;
                  
                  cout << joules << " / " << coloumbs << " = " << jvc_volts(joules, coulombs) << " volts "<< endl; 
                  
@@ -128,77 +131,91 @@
              
              cout << "something happened. it mine have been your fault. it might have been mine. but you're gonna suffer and start at the beginning."
              
-             start()
+             start(); 
          }
          
          case 2: 
          //resistance
-             double volts; 
-             double current; 
+             double volts, current; 
              
-             cout << "input your volts:" << endl; 
+             cout << "input your volts: "; 
              cin >> volts; 
-             cout << "input your current" << endl; 
+             cout << endl; 
+             
+             cout << "input your current: "; 
              cin >> current; 
+             cout << endl; 
              
              cout << volts << " / " << current << " = " << ohms_resistance(volts, current) << endl; 
          
          case 3: 
          //current
-             double resistance; 
-             double volts; 
+             double resistance, volts; 
              
-             cout << "input your resistance:" << endl; 
+             cout << "input your resistance: "; 
              cin >> resistance; 
-             cout << "input your volts:" << endl; 
+             cout << endl; 
+             
+             cout << "input your volts: "; 
              cin >> volts; 
+             cout << endl; 
              
              cout << volts << " / " << resistance << " = " << ohms_current(resistance, volts) << endl; 
             
          case 4: 
          //watts
-            double amps; 
-            double volts; 
+            double amps, volts; 
          
-            cout << "input your amps: " << endl;
+            cout << "input your amps: ";
             cin >> amps; 
-            cout << "input your volts: " << endl; 
+            cout << endl; 
+            
+            cout << "input your volts: "; 
             cin >> volts; 
+            cout << endl; 
             
             cout << amps << " * " << volts << " = " << wav_watts(amps, volts) << endl; 
          
          case 5:
              //amps
-             double watts; 
-             double volts; 
+             double watts, volts; 
              
-             cout << "input your watts: " << endl; 
+             cout << "input your watts: "; 
              cin >> watts; 
-             cout << "input your volts: " << endl; 
+             cout << endl; 
+             
+             cout << "input your volts: "; 
+             cin >> volts; 
+             cout << endl; 
              
              cout << watts << " / " << volts << " = " << wav_amps(watts, volts) << endl; 
              
          case 6: 
          //joules
          
-         double coloumbs; 
-         double volts; 
+         double coloumbs, volts; 
          
-         cout << "input your coloumbs" << endl; 
+         cout << "input your coloumbs: "; 
          cin >> coloumbs; 
-         cout << "input your volts"
+         cout << endl; 
+        
+         cout << "input your volts: "; 
+         cin >> volts; 
+         cout << endl; 
          
          cout << volts << " x " << coloumbs << " = " << jvc_joules(volts, coloumbs) << endl; 
          
          case 7: 
          //coloumbs
-         double joules; 
-         double volts; 
+         double joules, volts; 
          
-         cout << "input your joules: " << endl; 
-         cin >> joules; 
-         cout << "input your volts: " << endl; 
+         cout << "input your joules: "; 
+         cin >> joules;
+         cout << endl; 
+         
+         cout << "input your volts: "; 
          cin >> volts; 
+         cout << endl; 
          
          cout << joules << " / " << volts << " = " << jvc_coulombs(volts, coloumbs) << endl; 
          
@@ -211,46 +228,84 @@
  
  void mod_ener() {
      
-      cout << "Type the number of the equation you're looking for:" << endl << "1) efficency" << endl << "2) potential energy" << endl << "3) kinetic energy" << endl  << "4) work done" << endl  << "5) power" << endl  << "6) energy" << endl;
+      cout << "Type the number of the equation you're looking for:" << endl << "1) efficency" << endl << "2) potential energy" << endl << "3) kinetic energy" << endl  << "4) work done" << endl  << "5) power" << endl;
      
      int equation; 
      
      cin >> equation;
      
+     cout << endl; 
+     
      switch(equation) {
          case 1: //efficency
-            double e_out; 
-            double e_in; 
+            double e_out, e_in; 
             
-            cout << "input the amount of work input: " << endl; 
+            cout << "input the amount of work input: "; 
             cin >> e_in; 
+            cout << endl; 
             
-            cout << "input the amount of work output: " << endl; 
+            cout << "input the amount of work output: "; 
             cin >> e_out; 
+            cout << endl; 
             
-            cout << e_out << " / " << e_in << " = " << efficency(e_out, e_in) << endl; 
+            cout << e_out << " / " << e_in << " = " << efficency(e_out, e_in) << "% "<< endl; 
             
          case 2: //potential energy
-            double mass; 
-            double gravity; 
-            double height; 
+            double mass, gravity, height; 
             
-            cout << "input the amount of mass:" << endl; 
+            cout << "input the amount of mass: "; 
             cin >> mass; 
+            cout << endl; 
             
-            cout << "input the amount of gravity:" << endl; 
+            cout << "input the amount of gravity: "; 
             cin >> gravity; 
+            cout << endl; 
             
-            cout << "input the amount of height:" << endl; 
+            cout << "input the amount of height: "; 
             cin >> height; 
+            cout << endl; 
             
             cout << mass << " * " << gravity <<  " * " << height << " = " << GPE(mass, gravity, height) << endl; 
          
          case 3: //kinetic energy
-            double mass, double velocity; 
+            double mass, velocity; 
+            
+            cout << "input the amount of mass: "; 
+            cin >> mass; 
+            cout << endl; 
+            
+            cout << "input the amount of velocity: "; 
+            cin >> velocity; 
+            cout << endl; 
+            
+            cout << mass * velocity << " * " << mass * velocity << " * " << "0.5" << " = " << kinetic(mass, velocity) << endl; 
+            
          case 4: //work 
+            double force, distance; 
+            
+            cout << "input the amount of force: "; 
+            cin >> force; 
+            cout << endl; 
+            
+            cout << "input the amount of distance: "; 
+            cin >> distance; 
+            cout << endl; 
+            
+            cout << force << " * " << distance << " = " << work_done(force, distance); 
+            
          case 5: //power
-         case 6: //energy
+            double energy, time; 
+            
+            cout << "input the amount of energy: "; 
+            cin >> energy; 
+            cout << endl; 
+            
+            cout << "input the amount of time: "; 
+            cin >> force; 
+            cout << endl; 
+            
+            cout << energy << " / " << time << " = " << power(energy, time);
+         
          default: 
          
          cout << "the number you typed wasn't found. you'll be taken back to the start so you can learn from your mistakes and pay for your sins."
@@ -263,17 +318,81 @@
  
  void mod_force() {
      
-     cout << "Type the number of the equation you're looking for:" << endl;
+     cout << "Type the number of the equation you're looking for: " << endl << "1) speed" << endl << "2) acceleration" << endl << "3) force" << endl << "4) weight" << endl << "5) momentum" << endl << "6) chnage in momentum" << endl << "7) density" << endl << "8) pressure" << endl;
      
+     int user_input;
+     
+     cin >> user_input;
+     
+     switch (user_input) {
+     
+         case 1:
+         //speed
+             
+             double distance, time;
+             
+             cout << "input your distance: ";
+             cin >> distance;
+             cout << endl;
+             
+             cout << "input your time: ";
+             cin >> time;
+             cout << endl;
+             
+             cout << distance << " / " << time << " = " << speed(distance, time) << endl;
+             
+             
+         case 2:
+         //acceleration
+             
+             double f_velo, s_velo, time;
+             
+             cout << "input your start velocity: ";
+             cin >> s_velo;
+             cout << endl;
+             
+             cout << "input your end velocity: ";
+             cin >> f_velo;
+             cout << endl;
+             
+             cout << "input your time: ";
+             cin >> time;
+             cout << endl;
+             
+             cout << f_velo << " - " << s_velo << " * " << time << " = " << acceleration(f_velo, s_velo, time) << endl; 
+             
+         case 3:
+         //force
+             
+         case 4:
+         //weight
+             
+         case 5:
+         //momentum
+     
+         case 6:
+         //change in momentum
+             
+         case 7:
+         //density
+             
+         case 8:
+         //pressure
+        
+         default:
+             
+            cout << "sorry, your input was valid. you'll be returned to the start page." << endl;
+             start();
+     }
      
  }
  
  void mod_light() {
      
-     cout << "Type the number of the equation you're looking for:" << endl << "" << endl << "" << endl;
+     cout << "Type the number of the equation you're looking for: " << endl << "" << endl << "" << endl;
  }
  
  void mod_waves() {
      
-     cout << "Type the number of the equation you're looking for:" << endl << "" << endl << "" << endl;
+     cout << "Type the number of the equation you're looking for: " << endl << "" << endl << "" << endl;
  }
