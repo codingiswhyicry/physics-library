@@ -363,21 +363,92 @@
              
          case 3:
          //force
+         
+             double mass, acceleration;
              
+             cout << "input your mass: "; 
+             cin >> mass; 
+             cout << endl; 
+             
+             cout << "input your acceleration: "; 
+             cin >> acceleration; 
+             cout << endl; 
+                 
+             cout << mass << " * " << acceleration << " = " << force(mass, acceleration); << endl; 
+            
          case 4:
          //weight
-             
+        
+            double mass, gravity; 
+            
+            cout << "input your mass: "; 
+            cin >> mass; 
+            cout << endl; 
+            
+            cout << "input your gravity: "; 
+            cin >> gravity; 
+            cout << endl; 
+        
+            cout << mass << " * " << gravity << " = " << weight(mass, gravity) << endl; 
+    
          case 5:
          //momentum
-     
+         
+            double mass, velocity; 
+            
+            cout << "input your mass: "; 
+            cin >> mass; 
+            cout << endl; 
+            
+            cout << "input your velocity: "; 
+            cin >> velocity; 
+            cout << endl; 
+            
+            cout << mass << " * " << velocity << " = " << momentum(mass, velocity) << endl; 
+        
          case 6:
          //change in momentum
              
+             double force, time; 
+             
+             cout << "input your time: "; 
+             cin >> time; 
+             cout << endl; 
+             
+             cout << "input your force: "; 
+             cin >> force; 
+             cout << endl; 
+             
+             cout << force << " * " << time << " = " << changeInMomentum(force, time) << endl; 
+             
          case 7:
          //density
+         
+            double mass, volume; 
+            
+            cout << "input your mass"; 
+            cin >> mass; 
+            cout << endl; 
+            
+            cout << "input your volume"; 
+            cin >> volume; 
+            cout << endl; 
+            
+            cout << mass << " / " << volume << " = " << density(mass, volume) << endl;  
              
          case 8:
          //pressure
+            double force, area; 
+            
+            cout << "input your force: "; 
+            cin >> force; 
+            cout << endl; 
+            
+            cout << "input your area"; 
+            cin >> area; 
+            cout << endl; 
+            
+            cout << force << " / " << area << " = " << pressure(force, area) << endl;  
         
          default:
              
@@ -394,5 +465,49 @@
  
  void mod_waves() {
      
-     cout << "Type the number of the equation you're looking for: " << endl << "" << endl << "" << endl;
+     cout << "Type the number of the equation you're looking for: " << endl << "1) velocity" << endl << "2) frequency" << endl << "3) wavelength" << endl;
+     
+    int user_in; 
+    
+    cin >> user_in; 
+    cout << endl; 
+    
+    switch(user_in) {
+        
+        case 1:
+        //velocity
+        
+        double frequency, wavelength; 
+        
+        cout << "input your frequency: "; 
+        cin >> frequency; 
+        cout << endl; 
+        
+        cout << "input your wavelength: "; 
+        cin >> wavelength; 
+        cout << endl; 
+        
+        cout << frequency << " * " << wavelength << velocity(frequency, wavelength) << endl; 
+        
+        
+        
+        case 2: 
+        //frequency
+        
+        
+        case 3: 
+        //wavelength
+        
+        
+        default: 
+        
+    }
  }
+ 
+ /*
+ 
+    cout << ""; 
+    cin >> ; 
+    cout << endl; 
+ 
+ */
