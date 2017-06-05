@@ -490,10 +490,20 @@
         cout << frequency << " * " << wavelength << velocity(frequency, wavelength) << endl; 
         
         
-        
         case 2: 
         //frequency
         
+        double velocity, wavelength; 
+        
+        cout << "input your velocity: "; 
+        cin >> velocity; 
+        cout << endl; 
+        
+        cout << "input your wavelength: "; 
+        cin >> wavelength; 
+        cout << endl; 
+        
+        cout << 
         
         case 3: 
         //wavelength
