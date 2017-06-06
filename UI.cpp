@@ -1,6 +1,7 @@
  //include libraries up here 
  #include <iostream>
- #include "physics.h" 
+ #include "physics.h"
+ #include <string>
  
  using namespace std; 
  
@@ -21,6 +22,19 @@
     
     while (1 == 1) {
         
+        string user_in; 
+
+        cin >> user_in; 
+        
+        switch (user_in) {
+            
+            case "help": help(); 
+            
+            case "end": start(); 
+            
+            default: 
+            cout << "sorry! i couldn't find that command. type 'help' to learn more." << endl; 
+        }
         //check to see if user wrote help 
     }
      
@@ -62,8 +76,8 @@
  
  void help() {
      
-     cout << "welcome to the physics calculator!" << endl;
-     
+     cout << "welcome to the physics calculator!" << endl << "type 'help' to access this menu!" << endl << "type 'end' to go back to the main screen.";
+    
      //write help stuff here
      
  }
@@ -518,15 +532,11 @@
         cin >> frequency; 
         cout << endl; 
 
+         cout << velocity << " / " << frequency << " = " << wavelength(velocity, frequency) << endl; 
+        
         default: 
         
+        cout << "sorry, something went wrong!" << endl; 
     }
  }
  
- /*
- 
-    cout << ""; 
-    cin >> ; 
-    cout << endl; 
- 
- */
