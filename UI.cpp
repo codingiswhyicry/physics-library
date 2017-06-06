@@ -503,12 +503,21 @@
         cin >> wavelength; 
         cout << endl; 
         
-        cout << 
+        cout << velocity << " / " << wavelength << " = " << frequency(velocity, wavelength) << endl; 
         
         case 3: 
         //wavelength
         
+        double velocity, frequency; 
         
+        cout << "input your velocity: "; 
+        cin >> velocity; 
+        cout << endl; 
+     
+        cout << "input your frequency: "; 
+        cin >> frequency; 
+        cout << endl; 
+
         default: 
         
     }

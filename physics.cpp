@@ -121,10 +121,10 @@ double velocity(double frequency, double wavelength) {
 
 double frequency(double velocity, double wavelength) {
     
-    return; 
+    return velocity / wavelength; 
 }
 
 double wavelength(double velocity, double frequency) {
     
-    return;
+    return velocity / frequency;
 }
